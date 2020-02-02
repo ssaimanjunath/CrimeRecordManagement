@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.heisenberg.beherchange.Opinion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share opinion on your last drive"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/opi_label2"
+                android:fontFamily="sans-serif"/>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Enter Location"
+                android:id="@+id/opinion_autocomplete"
+                android:textSize="17dp"
+                android:maxLines="1"
+                android:textColorHint="#ccc"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/opi_label2"
+                android:fontFamily="sans-serif-condensed"
+                android:drawableLeft="@drawable/bluecircle"
+                android:layout_margin="5dp"
+                android:drawablePadding="20dp"
+                android:padding="5sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I'm recording about"
+                android:layout_margin="10dp"
+                android:paddingTop="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/opi_label3"
+                android:fontFamily="sans-serif"
+                android:layout_below="@+id/opinion_autocomplete"/>
+
+            <Spinner
+                android:id="@+id/report_about_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/opi_label3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/opi_label4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/desc_report"
+                android:layout_below="@+id/report_about_spinner"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/desc_report"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-4dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/opi_label4"
+                android:inputType="text|textMultiLine"
+                android:gravity="top"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate the drive"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:id="@+id/opi_label5"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="sans-serif"
+                android:layout_below="@+id/desc_report"/>
+
+            <RatingBar
+                android:rating="2.5"
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:theme="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratB"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/opi_label5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We assure that your opinion on places and drives will always stay anonymous!"
+                android:padding="10dp"
+                android:layout_below="@+id/ratB"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="sans-serif"
+                android:id="@+id/opi_label1"
+                android:textSize="16dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Review"
+        android:background="@drawable/buttonstyle2"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/submitOpinion" />
+
+
+
+</RelativeLayout>
